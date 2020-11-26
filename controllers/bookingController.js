@@ -23,7 +23,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
         //   `${req.protocol}://${req.get('host')}/img/tours/${tour.imageCover}`
         // ],
         images: [
-          `https://detours-app.herokuapp.com/img/tours/tour-jakarta - bromo-cover.jpeg`
+          `https://detours-app.herokuapp.com/img/tours/${tour.imageCover}`
         ],
         amount: tour.price * 100,
         currency: 'idr',
