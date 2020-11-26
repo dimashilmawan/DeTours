@@ -3,7 +3,6 @@ import { showAlert } from './alert';
 import axios from 'axios';
 
 export const forgotPassword = async email => {
-  console.log(email);
   try {
     const res = await axios({
       method: 'POST',

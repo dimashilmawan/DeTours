@@ -48,7 +48,6 @@ export const deleteDB = async (ID, DB) => {
       return 'success';
     }
   } catch (err) {
-    console.log(err);
     showAlert('error', err.response.data.message);
   }
 };
