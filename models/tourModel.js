@@ -56,6 +56,7 @@ const tourSchema = new mongoose.Schema({
 // save hook / save middleware
 tourSchema.pre('save', function(next) {
   this.slug = slugify(this.name, { lower: true });
+  this.imageCover = this.imageCover.replace(/\s+/g, '');
   next();
 });
 
