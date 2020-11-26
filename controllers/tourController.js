@@ -24,7 +24,8 @@ exports.uploadTourImages = upload.fields([
 exports.resizeTourImages = catchAsync(async (req, res, next) => {
   if (req.files.imageCover) {
     // 1. Image Cover
-    req.body.imageCover = `tour-${req.body.name}-cover.jpeg`;
+    let name = req.body.name.replace(/\s+/g, '');
+    req.body.imageCover = `tour-${name}-cover.jpeg`;
     await sharp(req.files.imageCover[0].buffer)
       .resize(2000, 1333)
       .toFormat('jpeg')
