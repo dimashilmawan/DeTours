@@ -1,0 +1,23 @@
+extends base
+
+block content
+  main
+    section#tours
+      .tours-content
+
+        each tour in tours
+          .card
+            .card-header
+              img(src=`/img/tours/${tour.imageCover}` alt=`${tour.name}`)
+            .card-detail
+              h3= tour.name
+              ul
+                li= `${tour.duration} hari`
+                li= `Max ${tour.maxGroupSize} orang`
+                - const date = tour.startDate.toLocaleString('en-US', {day: '2-digit', month: 'long', year: 'numeric'})
+                li= date
+                li= tour.location
+            .card-footer
+              - const price = tour.price.toLocaleString(['ban', 'id'])
+              h3= `Rp. ${price}`
+              a.btn(href=`/tour/${tour.slug}`) Detail

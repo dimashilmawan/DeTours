@@ -1,0 +1,20 @@
+extends base
+
+block content
+  main
+    section#form
+      .form-content
+        .form-header
+          h1 Sign up
+        form#signup
+          label(for='name') Name
+          input#name(type='text' required='' placeholder='Your name')
+          label(for='email') Email Address
+          input#email(type='email' required='' placeholder='you@example.com')
+          label(for='password') Password
+          input#password(type='password' required='' placeholder='••••••••' minlength='8')
+          label(for='passwordConfirm') Confirm Password
+          input#passwordConfirm(type='password' required='' placeholder='••••••••' minlength='8')
+          button.btn.btn-form(type='submit') Sign up
+          span Already have an account ?
+          a(href='/login') Login !

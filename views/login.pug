@@ -1,0 +1,17 @@
+extends base
+
+block content
+  main
+    section#form
+      .form-content
+        .form-header
+          h1 Login
+        form#login
+          label(for='email') Email Address
+          input#email(type='email' required='' placeholder='you@example.com')
+          label(for='password') Password
+          input#password(type='password' required='' placeholder='••••••••' minlength='8')
+          a(href='/forgot-password') Forgot Password ?
+          button.btn.btn-form(type='submit') Login
+          span Don't have an account?
+          a(href='/signup') Sign up Now !

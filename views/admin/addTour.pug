@@ -1,0 +1,152 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content='')
+    meta(name='author' content='')
+    // Custom fonts for this template
+    link(rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css' integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i' rel='stylesheet')
+    // Custom styles for this template
+    link(href='/admin/css/sb-admin-2.min.css' rel='stylesheet')
+    link(rel='shortcut icon' type='image/png' href='/img/favicon.ico')
+    title DeTours 
+  body#page-top
+    // Page Wrapper
+    #wrapper
+      // Sidebar
+      ul#accordionSidebar.navbar-nav.bg-detours.sidebar.sidebar-dark.accordion
+        // Sidebar - Brand
+        a.sidebar-brand.d-flex.align-items-center.justify-content-center(href='/')
+          .sidebar-brand-icon
+            i.fas.fa-home
+          .sidebar-brand-text.mx-3
+            | DeTours 
+        // Divider
+        hr.sidebar-divider.my-0
+        // Nav Item - Dashboard
+        li.nav-item(class=`${active === 'dashboard'? 'active' : ''}`)
+          a.nav-link(href='/admin')
+            i.fas.fa-fw.fa-tachometer-alt
+            span Dashboard
+        // Divider
+        hr.sidebar-divider
+        // Nav Item - Charts
+        li.nav-item(class=`${active === 'users'? 'active' : ''}`)
+          a.nav-link(href='/admin/users')
+            i.fas.fa-fw.fa-users
+            span Users
+        // Divider
+        hr.sidebar-divider
+        // Nav Item - Tables
+        li.nav-item(class=`${active === 'tours'? 'active' : ''}`)
+          a.nav-link(href='/admin/tours')
+            i.fas.fa-fw.fa-suitcase-rolling
+            span Tours
+        // Divider
+        hr.sidebar-divider.d-none.d-md-block
+        // Nav Item - Tables
+        li.nav-item(class=`${active === 'bookings'? 'active' : ''}`)
+          a.nav-link(href='/admin/bookings')
+            i.fas.fa-fw.fa-book
+            span Bookings
+        // Divider
+        hr.sidebar-divider.d-none.d-md-block
+        // Sidebar Toggler (Sidebar)
+        .text-center.d-none.d-md-inline
+          button#sidebarToggle.rounded-circle.border-0
+      // End of Sidebar
+      // Content Wrapper
+      #content-wrapper.d-flex.flex-column
+        // Main Content
+        #content
+          // Topbar
+          nav.navbar.navbar-expand.navbar-light.bg-white.topbar.mb-4.static-top.shadow
+            // Sidebar Toggle (Topbar)
+            button#sidebarToggleTop.btn.btn-link.d-md-none.rounded-circle.mr-3
+              i.fa.fa-bars
+            // Topbar Navbar
+            ul.navbar-nav.ml-auto
+              // Nav Item - User Information
+              li.nav-item.dropdown.no-arrow
+                a#userDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                  span.mr-2.d-none.d-lg-inline.text-gray-800.small.mr-2= user.name
+                  i.fas.fa-caret-down.fa-sm.text-gray-800
+                // Dropdown - User Information
+                .dropdown-menu.dropdown-menu-right.shadow.animated--grow-in(aria-labelledby='userDropdown')
+                  a.dropdown-item(href='#' data-toggle='modal' data-target='#logoutModal')
+                    i.fas.fa-sign-out-alt.fa-sm.fa-fw.mr-2.text-gray-400
+                    |             Logout
+          // End of Topbar
+          // Begin Page Content
+          .container-fluid
+            // btn create
+            .d-sm-flex.align-items-center.justify-content-between.mb-4
+              h1.h3.mb-0.text-gray-800 Add Tour
+            .card.shadow
+              .card-body
+                form#tour-form
+                  .form-group
+                    label(for='name') Name
+                    input#name.form-control(type='text' required minlength='10' maxLength="40")
+                  .form-group
+                    label(for='description') Description
+                    textarea#description.form-control.d-block.w-100( rows='7' required)
+                  .form-group
+                    label(for='price') Price
+                    input#price.form-control(type='number' required)
+                  .form-group
+                    label(for='price') Duration
+                    input#duration.form-control(type='number' required)
+                  .form-group
+                    label(for='maxGroupSize') Participant
+                    input#maxGroupSize.form-control(type='number' required)
+                  .form-group
+                    label(for='startDate') Departure Date
+                    input#startDate.form-control(type='date' required)
+                  .form-group
+                    label(for='startLoc') Start Location
+                    input#startLoc.form-control(type='text' required)
+                  .form-group
+                    label(for='location') Location
+                    input#location.form-control(type='text' required)
+                  .form-group
+                    label(for='imageCover') Image Cover
+                    input#imageCover.form-control(type='file' required accept='image/*')
+                  .form-group
+                    label(for='image' required) Images
+                    input#images.form-control(type='file' multiple required accept='image/*')
+                  button.btn.btn-success.btn-block(type='submit') Add
+          // /.container-fluid
+          // End of Main Content
+          // End of Content Wrapper
+          // End of Page Wrapper
+    // Scroll to Top Button
+    a.scroll-to-top.rounded(href='#page-top')
+      i.fas.fa-angle-up
+    // Logout Modal
+    #logoutModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title Ready to Leave?
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              span(aria-hidden='true') ×
+          .modal-body Select "Logout" below if you are ready to end your current session.
+          .modal-footer
+            form(action='http://travelkuy.patunganbersama.com/logout' method='POST')
+              input(type='hidden' name='_token' value='3reghNNog5krmD2yNvYuRz8IHUW6K6cGpH4nnDkx')
+              button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel
+              button.btn.btn-primary(type='submit')
+                | Logout
+    // Bootstrap core JavaScript
+    script(src='/admin/vendor/jquery/jquery.min.js')
+    script(src='/admin/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    // Core plugin JavaScript
+    script(src='/admin/vendor/jquery-easing/jquery.easing.min.js')
+    // Custom scripts for all pages
+    script(src='/admin/js/sb-admin-2.min.js')
+    script(src='https://js.stripe.com/v3/')
+    script(src='/js/bundle.js')

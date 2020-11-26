@@ -1,0 +1,29 @@
+header
+  nav.navbar.navbar-expand-lg.fixed-top
+    .container
+      a.navbar-brand(href='/') DeTours
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        svg.bi.bi-text-paragraph(width='1.5em' height='1.5em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+          path(fill-rule='evenodd' d='M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z')
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            a.nav-link(href='/')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/tours') Tours
+          li.nav-item
+            a.nav-link(href='/#features') Features
+          li.nav-item
+            a.nav-link(href='/#about') About
+          if user
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')= user.name.split(' ')[0]
+              .dropdown-menu(aria-labelledby='navbarDropdown')
+                a.dropdown-item(href='/my-tours') My Booking
+                .dropdown-divider
+                a.dropdown-item#logout(href='/') Logout
+          else
+            li.nav-item
+              a.btn.btn-login(href='/login') Login

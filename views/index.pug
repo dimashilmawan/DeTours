@@ -1,0 +1,118 @@
+extends base
+
+block content
+  main
+    section#jumbotron
+      .jumbotron-content
+        span OUTDOORS
+        span IS WHERE LIFE HAPPENS
+        a.btn.btn-main(href='/tours') Discover Our Tours
+    section#about
+      h1 Ingin Liburan Tapi Ga Ada Temennya ?
+      .about-content
+        .about-text
+          // <h3>YOU'RE GOING TO FALL IN LOVE WITH NATURE</h3>
+          p
+            | Detours merupakan sebuah usaha travel agency yang melayani tour and travel di indonesia. Detours merupakan travel agency yang berbasis online. Detours didirikan untuk memenuhi minat wisatawan yang ingin melakukan perjalanan wisata mengelilingi indonesia.
+          // <h3>LIVE ADVENTURES LIKE YOU NEVER HAVE BEFORE</h3>
+          p
+            | Kami melayani perjalanan wisata ke berbagai daerah terutama yang berada di pulau jawa. pulau jawa mempunyai banyak wisata alam seperti gunung, pantai dan tempat-tempat bersejarah. Detours memberikan pengalaman perjalanan yang membuat anda dapat memiliki banyak teman meski anda melakukan perjalanan seorang diri.
+        .about-image
+          #carouselExampleFade.carousel.slide.carousel-fade(data-ride='carousel')
+            .carousel-inner
+              .carousel-item.active
+                img.d-block.w-100(src='/img/tours/tour-jakarta - lembang-cover.jpeg' alt='tour-jakarta-lembang-cover.jpeg')
+              .carousel-item
+                img.d-block.w-100(src='/img/tours/tour-jakarta - dieng-3.jpeg' alt='tour-jakarta-dieng-3.jpeg')
+              .carousel-item
+                img.d-block.w-100(src='/img/tours/tour-jakarta - anyer-cover.jpeg' alt='tour-jakarta-anyer-cover.jpeg')
+            a.carousel-control-prev(href='#carouselExampleFade' role='button' data-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+            a.carousel-control-next(href='#carouselExampleFade' role='button' data-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Next
+    section#features
+      .features-content
+        .features-box
+          .icon
+            svg.bi.bi-globe(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+              path(fill-rule='evenodd' d='M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z')
+          h3 Explore Nature
+        .features-box
+          .icon
+            svg.bi.bi-geo-alt(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+              path(fill-rule='evenodd' d='M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z')
+              path(fill-rule='evenodd' d='M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z')
+          h3 Meet Nature
+        .features-box
+          .icon
+            svg.bi.bi-compass(width='1em' height='1.0625em' viewBox='0 0 16 17' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+              path(fill-rule='evenodd' d='M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z')
+              path(d='M6.94 7.44l4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z')
+          h3 Find Your Way
+        .features-box
+          .icon
+            svg.bi.bi-heart(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+              path(fill-rule='evenodd' d='M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z')
+          h3 A Healthier Life
+    section#popular
+      h1 MOST POPULAR TOURS
+      .popular-content
+        .card
+          .card-header
+            img(src='/img/tours/tour-jakarta - bromo-cover.jpeg' alt='tour-jakarta - bromo-cover.jpeg')
+          .card-detail
+            h3 Jakarta - Bromo
+            ul
+              li 3 hari
+              li max 35 orang
+              li February 13, 2021
+              li Malang - Jawa timur, indonesia
+          .card-footer
+            h3 Rp. 1,500,000
+            a.btn(href='/tour/jakarta-bromo') Detail
+        .card
+          .card-header
+            img(src='/img/tours/tour-jakarta - yogyakarta-cover.jpeg' alt='tour-jakarta - yogyakarta-cover.jpeg')
+          .card-detail
+            h3 Jakarta - Yogyakarta
+            ul
+              li 3 hari
+              li max 35 orang
+              li February 15, 2021
+              li Yogyakarta, Indonesia
+          .card-footer
+            h3 Rp. 1,000,000
+            a.btn(href='/tour/jakarta-yogyakarta') Detail
+        .card
+          .card-header
+            img(src='/img/tours/tour-jakarta - lembang-cover.jpeg' alt='tour-jakarta - lembang-cover.jpeg')
+          .card-detail
+            h3 Jakarta - Lembang
+            ul
+              li 2 hari
+              li max 35 orang
+              li January 16, 2021
+              li Lembang - Jawa barat, Indonesia
+          .card-footer
+            h3 Rp. 700,000
+            a.btn(href='/tour/jakarta-lembang') Detail
+      a.btn(href='/tours') Discover All Tours
+    section#stories
+      h1 WE MAKE PEOPLE GENUINELY HAPPY
+      .stories-content
+        .stories-box
+          .stories-image
+            img(src='/img/img-review1.jpg' alt='img-review1')
+            h5 Praditya kevin
+          .stories-review
+            p
+              | “ Liburan bersama detours sangat nyaman, bisa nambah networking, bisa nambah temen juga, jadi nunggu apalagi ayo gabung. ”
+        .stories-box
+          .stories-image
+            img(src='/img/img-review2.jpg' alt='img-review2')
+            h5 Lintang hanarki
+          .stories-review
+            p
+              | “ menyenangkan travelling bersama detours, banyak teman baru yang bisa diajak seru-seruan meskipun baru kenal, jadi pengen ikut lagi. ”
