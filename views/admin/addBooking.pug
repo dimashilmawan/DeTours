@@ -72,7 +72,7 @@ html(lang='en')
               // Nav Item - User Information
               li.nav-item.dropdown.no-arrow
                 a#userDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-                  span.mr-2.d-none.d-lg-inline.text-gray-800.small.mr-2= user.name
+                  span.mr-2.d-lg-inline.text-gray-800.small.mr-2= user.name
                   i.fas.fa-caret-down.fa-sm.text-gray-800
                 // Dropdown - User Information
                 .dropdown-menu.dropdown-menu-right.shadow.animated--grow-in(aria-labelledby='userDropdown')
@@ -119,10 +119,9 @@ html(lang='en')
               span(aria-hidden='true') ×
           .modal-body Select "Logout" below if you are ready to end your current session.
           .modal-footer
-            form(action='http://travelkuy.patunganbersama.com/logout' method='POST')
-              input(type='hidden' name='_token' value='3reghNNog5krmD2yNvYuRz8IHUW6K6cGpH4nnDkx')
-              button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel
-              button.btn.btn-primary(type='submit')
+            form
+              button.btn.btn-secondary.mr-2(type='button' data-dismiss='modal') Cancel
+              button.btn.btn-primary#logout(type='submit')
                 | Logout
     // Bootstrap core JavaScript
     script(src='/admin/vendor/jquery/jquery.min.js')
